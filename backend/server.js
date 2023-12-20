@@ -9,7 +9,11 @@ const app=express();
 //middleware
 app.use(express.json())
 const cors=require("cors");
-app.use(cors())
+app.use(cors( {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }))
 
 app.use((req,res,next)=>{
     console.log(req.path,req.method)
