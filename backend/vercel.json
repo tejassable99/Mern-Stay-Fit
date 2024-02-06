@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "routes": [
+      {
+        "src": "/api/workouts/(.*)",
+        "dest": "/routes/workouts.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/server.js"
+      }
+    ],
+    "builds": [
+      {
+        "src": "server.js",
+        "use": "@vercel/node"
+      }
+    ]
+  }
+  
