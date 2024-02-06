@@ -9,7 +9,7 @@ const app=express();
 //middleware
 app.use(express.json())
 const cors=require("cors");
-app.use(cors({ origin: 'http://localhost:3000' }))
+app.use(cors({ origin: 'https://mern-stay-fit-eglw-git-main-tejas-projects-c8790610.vercel.app/' }))
 
 app.use((req,res,next)=>{
     console.log(req.path,req.method)
