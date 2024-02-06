@@ -9,7 +9,7 @@ const app=express();
 //middleware
 app.use(express.json())
 const cors=require("cors");
-app.use(cors())
+app.use(cors({ origin: 'http://localhost:3000' }))
 
 app.use((req,res,next)=>{
     console.log(req.path,req.method)
