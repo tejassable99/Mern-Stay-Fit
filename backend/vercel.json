@@ -6,7 +6,7 @@
         "dest": "/routes/workouts.js"
       },
       {
-        "src": "/(.*)",
+        "src": "/api/workouts/(.*)",
         "dest": "/server.js"
       }
     ],
