@@ -5,9 +5,9 @@ const WorkoutDEtails=({temp})=>{
 
 axios.defaults.withCredentials = true;
 
-    const handleDelete=()=>{
+    const handleDelete=async()=>{
         try{
-        axios.delete(`https://mern-stay-fit-git-main-tejas-projects-c8790610.vercel.app/api/workouts/${temp._id}`)
+        await axios.delete(`https://mern-stay-fit-git-main-tejas-projects-c8790610.vercel.app/api/workouts/${temp._id}`)
         }
         catch(e){
             console.log(e)
