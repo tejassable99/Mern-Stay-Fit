@@ -4,10 +4,11 @@ const WorkoutForm=()=>{
     const [title,setTitle]=useState()
     const[load,setLoad]=useState()
     const[reps,setReps]=useState()
+    axios.defaults.withCredentials = true;
 
     const handleSubmit=()=>{
         try{
-        axios.post("https://mern-stay-jfyvmvb0i-tejas-projects-c8790610.vercel.app/api/workouts/",{title,load,reps})
+        axios.post("https://mern-stay-jfyvmvb0i-tejas-projects-c8790610.vercel.app/api/workouts",{title,load,reps})
         }
         catch(e){
             console.log(e)
