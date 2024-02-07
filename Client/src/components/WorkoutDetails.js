@@ -8,6 +8,7 @@ axios.defaults.withCredentials = true;
     const handleDelete=async()=>{
         try{
         await axios.delete(`https://mern-stay-fit-git-main-tejas-projects-c8790610.vercel.app/api/workouts/${temp._id}`)
+        console.log(temp._id);
         }
         catch(e){
             console.log(e)
