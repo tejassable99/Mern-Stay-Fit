@@ -10,7 +10,8 @@ const app=express();
 app.use(express.json())
 const cors=require("cors");
 app.use(cors({ origin: 'https://mern-stay-fit-eglw-git-main-tejas-projects-c8790610.vercel.app',
-               methods: ['GET', 'POST', 'DELETE'] }));
+               methods: [ 'POST', 'DELETE'],
+               credentials: true }));
 
 
 app.use((req,res,next)=>{

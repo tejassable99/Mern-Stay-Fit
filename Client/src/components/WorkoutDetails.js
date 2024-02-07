@@ -1,6 +1,10 @@
 import axios from "axios";
 
 const WorkoutDEtails=({temp})=>{
+    
+
+axios.defaults.withCredentials = true;
+
     const handleDelete=()=>{
         try{
         axios.delete(`https://mern-stay-fit-git-main-tejas-projects-c8790610.vercel.app/api/workouts/${temp._id}`)

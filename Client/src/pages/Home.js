@@ -4,6 +4,7 @@ import WorkoutForm from '../components/WorkoutForm';
 
 const Home=()=>{
     const [workouts,setWorkouts]=useState([]);
+    axios.defaults.withCredentials = true;
     useEffect(()=>{
         fetch("https://mern-stay-fit-git-main-tejas-projects-c8790610.vercel.app/api/workouts")
         .then((res)=>res.json())
